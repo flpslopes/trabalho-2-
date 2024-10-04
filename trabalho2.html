@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Nome</title>
+</head>
+<body>
+    <h1>Digite seu nome:</h1>
+    <input type="text" id="nome">
+    <button onclick="mostrarNome()">Enviar</button>
+    <p id="mensagem"></p>
+
+    <script>
+        function mostrarNome() {
+            var nome = document.getElementById('nome').value;
+            var mensagem = document.getElementById('mensagem');
+            if (nome === "") {
+                mensagem.innerHTML = "Por Favor, insira seu nome.";
+            } else {
+                mensagem.innerHTML = "Olá, " + nome;
+            }
+        }
+    </script>
+</body>
+</html>

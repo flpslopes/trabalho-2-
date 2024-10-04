@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Número</title>
+</head>
+<body>
+    <h1>Digite um número:</h1>
+    <input type="text" id="numero">
+    <button onclick="mostrarLista()">Gerar Lista</button>
+    <p id="mensagem"></p>
+    <ul id="lista"></ul>
+
+    <script>
+        function mostrarLista() {
+            var numero = document.getElementById('numero').value;
+            var mensagem = document.getElementById('mensagem');
+            var lista = document.getElementById('lista');
+            lista.innerHTML = "";
+            if (numero === "" || isNaN(numero)) {
+                mensagem.innerHTML = "Por Favor, insira um número válido.";
+            } else {
+                for (var i = 1; i <= numero; i++) {
+                    var item = document.createElement('li');
+                    item.innerHTML = "Item " + i + " -felipe lopes";
+                    lista.appendChild(item);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
